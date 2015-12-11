@@ -1,0 +1,8 @@
+com\viettel\test\test.class
+com\viettel\test\Application.class
+com\viettel\school\ws\SimpleCORSFilter.class
+com\viettel\school\model\Student.class
+com\viettel\test\HelloController.class
+com\viettel\school\dao\StudentDao.class
+com\viettel\school\util\HibernateUtil.class
+com\viettel\school\ws\RestServiceController.class
