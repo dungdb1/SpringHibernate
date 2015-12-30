@@ -1,0 +1,32 @@
+<div class="box">
+    <div class="box-header with-border">
+        <h3 class="box-title">Bordered Table</h3>
+    </div>
+<div class="box-body">
+    <table class="table table-bordered">
+        <tr>
+            <th style="width: 10px">#</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Adress</th>
+            <th style="width: 40px">Grade</th>
+        </tr>
+        <tr href="#/student/{{student.studentid}}" ng-repeat="student in students | filter:query">
+            <td>1.</td>
+            <td style="width: 50%">
+                <div class="col-md-3 col-sm-3">
+                    <img src="{{student.imageurl}}" class="img-circle img-responsive" />
+                </div>
+            </td>
+            <td>{{student.name}}</td>
+            <td>
+                {{student.address}}
+            </td>
+            <td>
+                {{student.grade}}
+            </td>
+        </tr>
+
+    </table>
+</div>
+</div>

@@ -3,6 +3,7 @@ var raControllers = angular.module('raControllers', []);
 raControllers.controller('StudentsListController', ['$scope','StudentsService',function($scope,StudentsService)
 
 {
+
     $scope.students=StudentsService.students();
 }]);
 

@@ -25,6 +25,7 @@ public List<Student> getStudents()
 	 
 	List<Student> students= s.createCriteria(Student.class).list();
 	 
+	s.clear();
 	s.close();
 	return students;
  
