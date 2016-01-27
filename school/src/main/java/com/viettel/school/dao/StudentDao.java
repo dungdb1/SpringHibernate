@@ -27,14 +27,15 @@ public List<Student> getStudents()
 {
 	 
 	Session s=sessionFactory.openSession();
-	 
-	s.flush();
-	s.clear();
 	
 	//List<Student> students= s.createCriteria(Student.class).list();
 	 
 	List<Student> students= s.createQuery("from Student students where 1=1").setCacheable(false).list();
 	
+	s.flush();
+	s.clear();
+	
+	//s.getTransaction().commit();
 	s.close();
 	return students;
  
@@ -51,7 +52,9 @@ public Student getStudent(int studentid)
 	cr.add(Restrictions.eq("studentid", studentid));
 	 
 	Student student=(Student) cr.list().get(0);
-	 
+	s.flush();
+	s.clear();
+	//s.getTransaction().commit();
 	s.close();
 	return student;
  

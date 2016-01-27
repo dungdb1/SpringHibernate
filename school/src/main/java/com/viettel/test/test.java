@@ -15,6 +15,7 @@ import com.viettel.school.dao.StudentDao;
 
 public class test {
 
+	/*
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -27,5 +28,5 @@ public class test {
 	        System.out.println(sv.getName());
 		
 	}
-
+*/
 }

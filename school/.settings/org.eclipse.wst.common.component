@@ -2,10 +2,12 @@
     <wb-module deploy-name="school">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-        <wb-resource deploy-path="/" source-path="/target/school-0.0.1-SNAPSHOT"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/" source-path="/target/school-0.0.1"/>
+        <wb-resource deploy-path="/" source-path="/target/school-0.0.1/WEB-INF"/>
+        <wb-resource deploy-path="/" source-path="/WebContent/META-INF"/>
         <property name="context-root" value="school"/>
         <property name="java-output-path" value="/school/target/classes"/>
     </wb-module>

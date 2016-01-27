@@ -25,6 +25,9 @@ public class Student {
        @Column(name="grade",nullable=false,length=50)
        String grade;
  
+       @Column(name="idClass",nullable=false)
+       int idClass;
+       
        public int getStudentid() {
               return studentid;
        }
@@ -64,4 +67,12 @@ public class Student {
        public void setGrade(String grade) {
               this.grade = grade;
        }
+       
+       public int getidClass() {
+           return idClass;
+       }
+
+	    public void setidClass(int idClass) {
+	           this.idClass = idClass;
+	    }
 }
