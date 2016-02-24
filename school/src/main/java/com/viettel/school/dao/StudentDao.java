@@ -3,14 +3,20 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.EntityManager;
+import javax.servlet.http.HttpServletRequest;
 
 import org.hibernate.Criteria;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 
  
 
+
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.viettel.school.model.Student;
 import com.viettel.school.util.HibernateUtil;
@@ -59,5 +65,7 @@ public Student getStudent(int studentid)
 	return student;
  
 }
+
+
  
 }

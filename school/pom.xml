@@ -16,10 +16,11 @@
    
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <java-version>1.8</java-version>
+    <java-version>1.7</java-version>
 	<org.springframework-version>4.0.6.RELEASE</org.springframework-version>
 	<org.aspectj-version>1.8.1</org.aspectj-version>
-	<org.slf4j-version>1.6.6</org.slf4j-version>
+	
+	<!--   org.slf4j-version>1.7.13</org.slf4j-version --> 
 	<jackson-2-version>2.4.1</jackson-2-version>
   </properties>
 
@@ -32,20 +33,74 @@
     </dependency>
     <!-- Spring -->
 	<dependency>
-	<groupId>org.springframework</groupId>
-	<artifactId>spring-context</artifactId>
-	<exclusions>
-	<!-- Exclude Commons Logging in favor of SLF4j -->
-	<exclusion>
-	<groupId>commons-logging</groupId>
-	<artifactId>commons-logging</artifactId>
-	</exclusion>
-	</exclusions>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<exclusions>
+		<!-- Exclude Commons Logging in favor of SLF4j -->
+			<exclusion>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+			</exclusion>
+			<exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>jcl-over-slf4j</artifactId>
+	        </exclusion>
+	        <exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>log4j-over-slf4j</artifactId>
+	        </exclusion>
+	        <exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-api</artifactId>
+	        </exclusion>
+	        <exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>jul-to-slf4j</artifactId>
+	        </exclusion>
+	        <exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-log4j12</artifactId>
+	        </exclusion>
+	        <exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-jdk14</artifactId>
+	        </exclusion>
+		</exclusions>
 	</dependency>
 	<dependency>
 	<groupId>org.springframework</groupId>
 	<artifactId>spring-webmvc</artifactId>
-	
+	<exclusions>
+		<!-- Exclude Commons Logging in favor of SLF4j -->
+			<exclusion>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+			</exclusion>
+			<exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>jcl-over-slf4j</artifactId>
+	        </exclusion>
+	        <exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>log4j-over-slf4j</artifactId>
+	        </exclusion>
+	        <exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-api</artifactId>
+	        </exclusion>
+	        <exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>jul-to-slf4j</artifactId>
+	        </exclusion>
+	        <exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-log4j12</artifactId>
+	        </exclusion>
+	        <exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-jdk14</artifactId>
+	        </exclusion>
+		</exclusions>
 	</dependency>
 	 
 	<!-- AspectJ -->
@@ -55,24 +110,16 @@
 	</dependency>
 	 
 	<!-- Logging -->
-	<dependency>
-	<groupId>org.slf4j</groupId>
-	<artifactId>slf4j-api</artifactId>
-	
-	</dependency>
+	<!-- 
 	<dependency>
 	<groupId>org.slf4j</groupId>
 	<artifactId>jcl-over-slf4j</artifactId>
 	
 	<scope>runtime</scope>
 	</dependency>
+	 -->
 	<dependency>
-	<groupId>org.slf4j</groupId>
-	<artifactId>slf4j-log4j12</artifactId>
 	
-	<scope>runtime</scope>
-	</dependency>
-	<dependency>
 	<groupId>log4j</groupId>
 	<artifactId>log4j</artifactId>
 	<exclusions>
@@ -181,7 +228,38 @@
 	      <groupId>org.springframework.boot</groupId>
 	      <artifactId>spring-boot-starter-logging</artifactId>
 	    </exclusion>
-	  </exclusions>
+	    
+		<!-- Exclude Commons Logging in favor of SLF4j -->
+			<exclusion>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+			</exclusion>
+			<exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>jcl-over-slf4j</artifactId>
+	        </exclusion>
+	        <exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>log4j-over-slf4j</artifactId>
+	        </exclusion>
+	        <exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-api</artifactId>
+	        </exclusion>
+	        <exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>jul-to-slf4j</artifactId>
+	        </exclusion>
+	        <exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-log4j12</artifactId>
+	        </exclusion>
+	        <exclusion>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-jdk14</artifactId>
+	        </exclusion>
+		</exclusions>
+	  
 	</dependency>
 	
 	

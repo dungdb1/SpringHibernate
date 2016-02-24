@@ -1,11 +1,17 @@
 /**
  * Created by dungdb1 on 14/12/2015.
  */
-var restAngular = angular.module('restAngular',['ngRoute','raControllers','raServices']);
+var restAngular = angular.module('restAngular',['ngRoute','raControllers','raServices','showcase.angularWay.dataChange','hljs']);
+
+
 
 restAngular.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
+            when('/QuanTriHeThong', {
+                templateUrl: 'template/student-view-list.html',
+                controller: 'StudentsListController'
+            }).
             when('/students', {
                 templateUrl: 'template/student-view-list.html',
                 controller: 'StudentsListController'
@@ -15,8 +21,12 @@ restAngular.config(['$routeProvider',
                 controller: 'StudentDetailsController'
             }).
             when('/chucnangx', {
-                templateUrl: 'template/chucnangx.html',
-                controller: 'StudentDetailsController'
+                templateUrl: 'template/datatable.html',
+                controller: 'AngularWayChangeDataCtrl'
+            }).
+            when('/chucnangy1', {
+                templateUrl: 'template/class.html',
+                controller: 'ClassController'
             }).
             otherwise({
                 redirectTo: '/students'
