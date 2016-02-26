@@ -1,7 +1,7 @@
 /**
  * Created by dungdb1 on 14/12/2015.
  */
-var restAngular = angular.module('restAngular',['ngRoute','raControllers','raServices','showcase.angularWay.dataChange','hljs']);
+var restAngular = angular.module('restAngular',['ngRoute','raControllers','raServices','datatables']);
 
 
 
@@ -22,7 +22,7 @@ restAngular.config(['$routeProvider',
             }).
             when('/chucnangx', {
                 templateUrl: 'template/datatable.html',
-                controller: 'AngularWayChangeDataCtrl'
+                controller: 'StudentInClassController'
             }).
             when('/chucnangy1', {
                 templateUrl: 'template/class.html',
